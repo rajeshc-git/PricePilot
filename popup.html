@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PricePilot</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>PricePilot</h1>
+      <div class="total-summary">
+        <div class="total-items">Tracked: <span id="item-count">0</span></div>
+        <div class="total-price">Total: ₹<span id="total-amount">0</span></div>
+      </div>
+    </header>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Search your tracked items...">
+      <button id="clear-search" class="icon-button">✕</button>
+    </div>
+
+    <div class="filter-options">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="price-drop">Price Drops</button>
+      <button class="filter-btn" data-filter="price-rise">Price Rises</button>
+    </div>
+
+    <div id="empty-state" class="empty-state">
+      <img src="icons/empty-state.svg" alt="No items tracked">
+      <h3>No products tracked yet</h3>
+      <p>Visit Amazon, Flipkart or other supported sites to add products</p>
+    </div>
+
+    <div id="products-list" class="products-list"></div>
+
+    <div class="actions">
+      <button id="settings-btn" class="icon-button">⚙️</button>
+      <button id="refresh-btn" class="icon-button">🔄</button>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

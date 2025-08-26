@@ -1,0 +1,8 @@
+/* Additional styling for the content script button */
+.pricepilot-added {
+  background: linear-gradient(90deg, #38a169 0%, #48bb78 100%) !important;
+}
+
+.pricepilot-added::after {
+  content: " ✓";
+}

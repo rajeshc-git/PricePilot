@@ -1,0 +1,45 @@
+{
+  "manifest_version": 3,
+  "name": "PricePilot - Indian Price Tracker",
+  "version": "1.0",
+  "description": "Track prices on Indian e-commerce sites and get alerts for price drops",
+  "permissions": [
+    "activeTab",
+    "storage",
+    "alarms",
+    "notifications",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://*.amazon.in/*",
+    "https://*.flipkart.com/*",
+    "https://*.myntra.com/*",
+    "https://*.nykaa.com/*",
+    "https://*.ajio.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "PricePilot"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.amazon.in/*",
+        "https://*.flipkart.com/*",
+        "https://*.myntra.com/*",
+        "https://*.nykaa.com/*",
+        "https://*.ajio.com/*"
+      ],
+      "js": ["content.js"],
+      "css": ["content.css"]
+    }
+  ],
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  }
+}
