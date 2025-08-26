@@ -1,4 +1,4 @@
-PricePilot
+#PricePilot#
 
 PricePilot is a Chrome extension that tracks price changes on popular e-commerce platforms like Amazon, Flipkart, and Meesho. Get notifications when prices drop or rise and never miss a deal!
 
